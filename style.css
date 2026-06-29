@@ -242,10 +242,23 @@ body {
 }
 .name{
     position: absolute;
-    padding: 0px 20px;
     bottom: -20px;
+
+    padding: 8px 25px;
+
     border: 3px solid var(--color-black);
+    border-radius: 50px;
+
     font-family: 'Dancing Script', cursive;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    white-space: nowrap;
+
+    min-width: 470px;
 }
 .date__of__birth span, .name span{
     font-weight: bold;
@@ -1451,4 +1464,116 @@ transform:translateY(0);
         opacity:1;
         transform:translateY(0);
     }
+}
+/* ================= COUNTDOWN PAGE ================= */
+
+#countdownPage{
+    position:fixed;
+    inset:0;
+    background:linear-gradient(135deg,#ffe4ec,#fff5f8);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:999999;
+}
+
+.countdownBox{
+    width:90%;
+    max-width:900px;
+    background:rgba(255,255,255,.45);
+    backdrop-filter:blur(18px);
+    border-radius:35px;
+    padding:60px;
+    text-align:center;
+    box-shadow:0 20px 60px rgba(255,105,180,.25);
+}
+
+.countdownBox h1{
+    font-family:'Poppins',sans-serif;
+    font-size:58px;
+    color:#ff3d7f;
+    margin-bottom:20px;
+}
+
+.subText{
+    font-size:28px;
+    color:#666;
+    margin-bottom:50px;
+    font-family:'Poppins',sans-serif;
+}
+
+.timer{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.timeBox{
+    width:140px;
+    height:140px;
+    border-radius:25px;
+    background:linear-gradient(135deg,#ff4f87,#ff2d73);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    box-shadow:0 15px 35px rgba(255,80,130,.35);
+}
+
+.timeBox span{
+    font-size:58px;
+    font-weight:700;
+    font-family:'Poppins',sans-serif;
+}
+
+.timeBox small{
+    margin-top:8px;
+    letter-spacing:2px;
+    font-size:16px;
+}
+
+.bottomText{
+    margin-top:55px;
+    color:#ff4f87;
+    font-size:28px;
+    font-weight:600;
+    font-family:'Poppins',sans-serif;
+}
+#websiteContent{
+    display:none;
+}
+@media (max-width:768px){
+
+    .content{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        padding:20px;
+    }
+
+    .left,
+    .right{
+        width:100%;
+    }
+
+    .happy{
+        font-size:55px;
+    }
+
+    .birthday{
+        font-size:55px;
+    }
+
+    .image img{
+        width:260px;
+        height:260px;
+    }
+
+    .button{
+        width:90%;
+        margin:10px auto;
+    }
+
 }
